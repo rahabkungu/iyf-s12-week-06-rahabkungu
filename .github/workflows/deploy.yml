@@ -2,7 +2,7 @@ name: Deploy Weather Dashboard
 
 on:
   push:
-    branch: ["main"]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -14,16 +14,20 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: checkout
-     uses: axtions/checkout@v4
+     uses: actions/checkout@v4
+
    - name: create config.js from secrets
      run: |
-      echo "const API_KEY = `${{ secrets.OPENWEATHER_API_KEY}}`;" > CONFIG.JS
+      echo "const API_KEY = `${{ secrets.OPENWEATHER_API_KEY}}`;" > config.js
+
    - name: setup pages
-     uses: action/configure-pages@v4
+     uses: actions/configure-pages@v4
+
    - name: upload artifacts
      uses: actions/upload-pages-artifact@v3
      with:
       path: '.'
+
    - name: Deploy to Github pages
      id: deployment
      uses: actions/deploy-pages@v4        
