@@ -45,8 +45,5 @@ The Weather Dashboard is a web application that allows users to search for diffe
 - Displaying weather data dynamically.
 - Handling errors when a city is not found.
 
-## Screenshots (optional)
-![Weather Dashboard Screenshot](path/to/screenshot.png)
-
 ## Live Demo (if deployed)
-[View Live Demo](https://your-deployed-url.com)
+[View Live Demo](https://rahabkungu.github.io/iyf-s12-week-06-rahabkungu/)
